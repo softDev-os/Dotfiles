@@ -92,12 +92,9 @@ alias gpf="git push -f"
 alias gl="git pull"
 alias ga="git add"
 alias gaa="git add --all"
-<<<<<<< HEAD
 alias gc="git clone" 
 alias gcm="git commit -m" 
-=======
 alias gc="git commit -m"
->>>>>>> e02c12493a547e2873c4e54d33af968827185fc5
 #alias gcmsg="git commit -m"
 # alias gcmsg="git commit -S -m" # This is a signed commit aliases
 alias gcam="git commit --amend"
@@ -157,7 +154,7 @@ alias nano='nano -x -O'
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
-
+alias catj='cat -l java'
 #alias tldr='tldr'
 #alias navi='navi'
 # command -v nvim >/dev/null && alias vim='nvim'
