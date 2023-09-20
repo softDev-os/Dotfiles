@@ -85,7 +85,7 @@ function extractPorts(){
     echo -e "\t[*] Open ports: $ports\n"  >> extractPorts.tmp
     echo $ports | tr -d '\n' | xclip -sel clip
     echo -e "[*] Ports copied to clipboard\n"  >> extractPorts.tmp
-    cat extractPorts.tmp; rm extractPorts.tmp
+    bat -l java extractPorts.tmp; rm extractPorts.tmp
 }
 
 # Settarget
@@ -124,9 +124,38 @@ function fzf-lovely(){
     fi
 }
 
-function rmk(){
-    scrub -p dod $1
-    shred -zun 10 -v $1
+# function rmk(){
+#     scrub -p dod $1
+#     shred -zun 10 -v $1
+# }
+
+function rmk() {
+    local file_or_dir="$1"
+    
+    if [ -z "$file_or_dir" ]; then
+        echo "Uso: rmk <archivo o directorio>"
+        return 1
+    fi
+
+    # Verificar si el archivo o directorio existe
+    if [ ! -e "$file_or_dir" ]; then
+        echo "$file_or_dir no existe."
+        return 1
+    fi
+
+    if [ -f "$file_or_dir" ]; then
+        # Si es un archivo, borrarlo de manera segura
+        scrub -p dod "$file_or_dir"
+        shred -zun 10 -v "$file_or_dir"
+    elif [ -d "$file_or_dir" ]; then
+        # Si es un directorio, borrarlo de manera recursiva
+        rm -r "$file_or_dir"
+    else
+        echo "$file_or_dir no es ni un archivo ni un directorio."
+        return 1
+    fi
+
+    echo "$file_or_dir ha sido borrado de manera segura."
 }
 
 bindkey "^[[H" beginning-of-line
@@ -136,3 +165,4 @@ bindkey "^[[3~" delete-char
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 bindkey "^U" backward-kill-line
+bindkey "^B" beginning-of-line
