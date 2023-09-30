@@ -6,9 +6,11 @@
 
 # Bookmarks
 alias wp='cd $HOME/workspaces'
-alias wd='cd $HOME/workspaces/dotfiles'
+alias wd='cd $HOME/workspaces/Dotfiles/'
 alias nc='cd $HOME/.config/nvim/'
 alias git-d='cd $HOME/Downloads/git-downloads'
+alias bootcamp-d='cd $HOME/workspaces/Curso-de-Udemy-web/The\ Complete\ 2023\ Web\ Development\ Bootcamp/'
+alias google-d='cd $HOME/Downloads/Google'
 ###############################################################################
 # Basic Aliases
 ###############################################################################
@@ -94,7 +96,6 @@ alias ga="git add"
 alias gaa="git add --all"
 alias gc="git clone" 
 alias gcm="git commit -m" 
-alias gc="git commit -m"
 #alias gcmsg="git commit -m"
 # alias gcmsg="git commit -S -m" # This is a signed commit aliases
 alias gcam="git commit --amend"
@@ -150,11 +151,12 @@ alias rm='rm -v'
 alias ff='fzf-lovely'
 
 alias nano='nano -x -O'
-
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
 alias catj='cat -l java'
+alias up='sudo dnf update -y'
+alias live='live-server'
 #alias tldr='tldr'
 #alias navi='navi'
 # command -v nvim >/dev/null && alias vim='nvim'
