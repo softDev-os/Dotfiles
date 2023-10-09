@@ -11,7 +11,7 @@ super + shift + Return
 	bspc rule -a kitty -o state=floating follow=on center=true rectangle=490x310+0+0 && kitty
 
 # i3lock 
-shift + l
+super + shift + l
 	/usr/bin/i3lock-everblush
 
 
