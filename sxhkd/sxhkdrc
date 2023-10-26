@@ -161,6 +161,10 @@ super + shift + g
 super + shift + b
 	burpsuite
 
+#Flameshot
+super + shift + s
+	flameshot gui
+
 ###############
 # ScreenShots #
 ###############
