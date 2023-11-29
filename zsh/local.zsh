@@ -1,5 +1,6 @@
 # Fix the Java Problem
 source $HOME/.cargo/env
+export PATH=~/bin:$PATH
 export CC="ccacheV gcc"
 export PATH="$PATH:~/.nvm/versions/node/v20.7.0/bin/prettier"
 export CXX="ccache g++"

@@ -156,6 +156,10 @@ super + shift + d
 # Google Chrome
 super + shift + g 
   google-chrome
+  
+# Responsive Web
+super + shift + r 
+  /opt/responsiveapp/ResponsivelyApp-1.10.0.AppImage
 
 # BurpSuite
 super + shift + b

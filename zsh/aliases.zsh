@@ -115,7 +115,7 @@ alias gf="git fetch"
 alias gfa="git fetch --all"
 alias gm="git merge"
 alias grs="git restore"
-
+alias gi="git init -b main"
 git-re-master() {
   git checkout master && git fetch upstream && git pull upstream master
 }
