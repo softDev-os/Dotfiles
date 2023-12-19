@@ -12,6 +12,7 @@ fi
 # Para personalizar el prompt, ejecuta `p10k configure` o edita ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
+[[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 # Carga el script de FZF, si está presente
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

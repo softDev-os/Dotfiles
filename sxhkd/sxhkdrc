@@ -147,7 +147,7 @@ super + alt + {h,j,k,l}
 
 # Firefox
 super + shift + f
-	firejail /opt/firefox/firefox
+ firejail --noprofile	/opt/firefox/firefox-bin
 
 # Discord
 super + shift + d

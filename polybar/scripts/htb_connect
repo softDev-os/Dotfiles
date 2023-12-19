@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# script to connect to HackTheBox
+
+ovpn_file="/home/softdev/Downloads/starting_point_softDs.ovpn"
+
+connect_to_ovpn() {
+	sudo openvpn --config "$ovpn_file" &
+}
+
+disconnect_from_ovpn() {
+	sudo pkill openvpn
+}
+
+togle_ovpn() {
+	# if openvpn is running, disconnect from it
+	if
+		pgrep -x "openvpn" >/dev/null
+	then
+		disconnect_from_ovpn
+	else
+		connect_to_ovpn
+	fi
+}
+
+togle_ovpn

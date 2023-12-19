@@ -21,6 +21,8 @@ alias q="exit"
 alias c="clear"
 alias w="which"
 alias hgrep="fc -El 0 | grep"
+alias vim="nvim"
+alias nn="nvim"
 
 alias gpd="git push origin --delete "
 alias p3="python3"
@@ -156,7 +158,9 @@ alias diff='diff --color=auto'
 alias ip='ip --color=auto'
 alias catj='cat -l java'
 alias up='sudo dnf update -y'
+alias up5='sudo dnf5 upgrade -y'
 alias live='live-server'
+alias john='/opt/pentesting/john/run/john'
 #alias tldr='tldr'
 #alias navi='navi'
 # command -v nvim >/dev/null && alias vim='nvim'

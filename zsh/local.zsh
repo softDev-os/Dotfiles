@@ -3,6 +3,7 @@ source $HOME/.cargo/env
 export PATH=~/bin:$PATH
 export CC="ccacheV gcc"
 export PATH="$PATH:~/.nvm/versions/node/v20.7.0/bin/prettier"
+export PATH="$PATH:$HOME:/usr/local/rvm/gems/ruby-3.0.5/bin"
 export CXX="ccache g++"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # Esto carga NVM
