@@ -1,10 +1,15 @@
 # Fix the Java Problem
+export CARGO_HOME=$HOME/.cargo
+export RUSTUP_HOME=$HOME/.rustup
+export PATH=$CARGO_HOME/bin:$PATH
 source $HOME/.cargo/env
 export PATH=~/bin:$PATH
-export CC="ccacheV gcc"
+# export CC="ccacheV gcc"
+# export PKG_CONFIG_PATH=/var/lib/snapd/snap/enum4linux/52/usr/lib/pkgconfig/smbclient.pc:$PKG_CONFIG_PATH
+export PKG_CONFIG_PATH=/var/lib/snapd/snap/enum4linux/55/usr/lib/pkgconfig/smbclient.pc:$PKG_CONFIG_PATH
 export PATH="$PATH:~/.nvm/versions/node/v20.7.0/bin/prettier"
 export PATH="$PATH:$HOME:/usr/local/rvm/gems/ruby-3.0.5/bin"
-export CXX="ccache g++"
+# export CXX="ccache g++"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # Esto carga NVM
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # Esto carga la finalización automática de NVM
@@ -109,20 +114,20 @@ function fzf-lovely(){
     if [ "$1" = "h" ]; then
         fzf -m --reverse --preview-window down:20 --preview '[[ $(file --mime {}) =~ binary ]] &&
  	                echo {} is a binary file ||
-	                 (bat --style=numbers --color=always {} ||
+	                 (bat -l java --style=numbers --color=always {} ||
 	                  highlight -O ansi -l {} ||
 	                  coderay {} ||
 	                  rougify {} ||
-        cat {}) 2> /dev/null | head -500'
+        bat -l java {}) 2> /dev/null | head -500'
         
     else
         fzf -m --preview '[[ $(file --mime {}) =~ binary ]] &&
 	                         echo {} is a binary file ||
-	                         (bat --style=numbers --color=always {} ||
+	                         (bat -l java --style=numbers --color=always {} ||
 	                          highlight -O ansi -l {} ||
 	                         coderay {} ||
 	                          rougify {} ||
-        cat {}) 2> /dev/null | head -500'
+        bat -l java {}) 2> /dev/null | head -500'
     fi
 }
 
