@@ -14,6 +14,9 @@ pkill sxhkd
 sxhkd &
 pgrep -x sxhkd >/dev/null
 
+# Inicia Xresources
+xrdb .Xresource
+
 # Inicia picom (compositor de ventanas)
 pkill picom
 picom -f --daemon --config "${HOME}/.config/picom/picom.conf" &
