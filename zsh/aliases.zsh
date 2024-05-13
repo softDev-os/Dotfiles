@@ -151,6 +151,7 @@ alias cp='cp -v'
 alias mv='mv -v'
 alias rm='rm -v'
 alias ff='fzf-lovely'
+alias dnf5='dnf'
 
 alias nano='nano -x -O'
 alias grep='grep --color=auto'
