@@ -40,3 +40,11 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # bun completions
 [ -s "/home/softdev/.local/share/reflex/bun/_bun" ] && source "/home/softdev/.local/share/reflex/bun/_bun"
+
+# pnpm
+export PNPM_HOME="/home/softdev/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

@@ -2,7 +2,7 @@
 
 # script to connect to HackTheBox
 
-ovpn_file="/root/starting_point_softDs.ovpn"
+ovpn_file="/root/lab_softDs.ovpn"
 
 connect_to_ovpn() {
 	sudo openvpn --config "$ovpn_file" &
